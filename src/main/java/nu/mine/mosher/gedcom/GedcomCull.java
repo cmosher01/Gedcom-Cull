@@ -27,7 +27,7 @@ public class GedcomCull {
             return;
         }
 
-        final File fileOutput = fileInput.get().toPath().getParent().resolve(fileInput.get().getName()+".cull").toFile();
+        final File fileOutput = new File(fileInput.get().getName()+".cull");
         if (fileOutput.exists()) {
             System.err.println("ERROR: File "+fileOutput.getAbsolutePath()+" already exists; skipping.");
             return;
