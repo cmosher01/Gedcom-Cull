@@ -82,7 +82,7 @@ public class GedcomCull {
                 indiOutput.addChild(attrOutput);
                 if (c.getObject().getTag().equals(BIRT) || c.getObject().getTag().equals(DEAT)) {
                     for (final TreeNode<GedcomLine> c2 : c) {
-                        if (c2.getObject().getTag().equals(GedcomTag.DATE)) {
+                        if (c2.getObject().getTag().equals(GedcomTag.DATE) || c2.getObject().getTag().equals(PLAC)) {
                             attrOutput.addChild(new TreeNode<>(c2.getObject()));
                         }
                     }
